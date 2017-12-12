@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.riteboiler.frontoffice.view.AddressesController">
+   <children>
+      <SplitPane dividerPositions="0.15577889447236182" layoutX="140.0" layoutY="44.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" fillHeight="false" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="Select an address below or">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#handleAddAddress" text="+ Add New Address" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <TableView fx:id="addressTable" prefHeight="317.0" prefWidth="598.0">
+                          <columns>
+                            <TableColumn fx:id="addressNameColumn" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="addressStreetColumn" prefWidth="75.0" text="Street" />
+                              <TableColumn fx:id="addressCityColumn" prefWidth="75.0" text="City" />
+                              <TableColumn fx:id="addressStateColumn" prefWidth="75.0" text="State" />
+                              <TableColumn fx:id="addressZipColumn" prefWidth="75.0" text="Zip Code" />
+                              <TableColumn fx:id="addressCountryColumn" prefWidth="75.0" text="Country" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <HBox alignment="TOP_RIGHT" fillHeight="false" spacing="10.0">
+                           <children>
+                              <Button alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#handleSelect" text="Select" />
+                              <Button mnemonicParsing="false" onAction="#handleEditAddress" text="Edit" />
+                              <Button alignment="CENTER_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

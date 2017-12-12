@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minHeight="0.0" minWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.riteboiler.frontoffice.view.AcknowledgmentTabController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="acknowledgmentTable" prefHeight="744.0" prefWidth="294.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="ackIdColumn" prefWidth="75.0" text="A#" />
+                        <TableColumn fx:id="ackSoldToColumn" prefWidth="75.0" text="Sold To" />
+                        <TableColumn fx:id="ackShipToColumn" prefWidth="75.0" text="Ship To" />
+                     </columns>
+                  </TableView>
+                  <Button mnemonicParsing="false" onAction="#handleNewAcknowledgment" prefHeight="40.0" prefWidth="294.0" text="+ New Acknowledgment" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="300.0">
+               <children>
+                  <ScrollPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                           <children>
+                              <GridPane prefHeight="800.0" prefWidth="663.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <children>
+                                    <Label text="A#:">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Date:" GridPane.columnIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Sold To:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Ship To:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Notify Before Delivery:" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Tag:" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Date Order Received:" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Customer Order Number:" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Approx. Ship Date:" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Shipping Cost:" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="FOB:" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Ship Via:" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Products:" GridPane.rowIndex="8">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Documents:" GridPane.rowIndex="9">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Price:" GridPane.rowIndex="10">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="aNumberLabel" GridPane.columnIndex="1" />
+                                    <Label fx:id="dateLabel" GridPane.columnIndex="3" />
+                                    <VBox GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label fx:id="soldToNameLabel" />
+                                          <Label fx:id="soldToStreetLabel" />
+                                          <Label fx:id="soldToComboLabel" />
+                                       </children>
+                                    </VBox>
+                                    <VBox GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label fx:id="shipToNameLabel" />
+                                          <Label fx:id="shipToStreetLabel" />
+                                          <Label fx:id="shipToComboLabel" />
+                                       </children>
+                                    </VBox>
+                                    <Label fx:id="notifyLabel" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+                                    <Label fx:id="tagLabel" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="4" />
+                                    <Label fx:id="dateOrderReceivedLabel" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label fx:id="customerOrderNumberLabel" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                    <Label fx:id="approxShipDateLabel" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label fx:id="shippingCostLabel" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                                    <Label fx:id="fobLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label fx:id="shipViaLabel" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                                    <Label fx:id="documentsLabel" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="9" />
+                                    <Label fx:id="priceLabel" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <HBox alignment="BOTTOM_RIGHT" spacing="10.0" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="11">
+                                       <children>
+                                          <Button fx:id="savePDFButton" disable="true" mnemonicParsing="false" onAction="#handleSaveToPDF" text="Save to PDF" />
+                                          <Button fx:id="editButton" disable="true" mnemonicParsing="false" onAction="#handleEditAcknowledgment" text="Edit" />
+                                          <Button fx:id="deleteButton" disable="true" mnemonicParsing="false" onAction="#handleDeleteAcknowledgment" text="Delete" />
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="productTable" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="8">
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <columns>
+                                          <TableColumn fx:id="prodQuantityColumn" prefWidth="122.0" text="Quantity" />
+                                          <TableColumn fx:id="prodDescriptionColumn" prefWidth="406.0" text="Description" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="137.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="210.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="151.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="10.0" prefWidth="178.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FrontOffice.jnlp">
+  <information>
+    <title>FrontOffice</title>
+    <vendor>Rite Boiler</vendor>
+    <description>Front Office</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FrontOffice.jar" size="132948" download="eager" />
+    <jar href="libs\itextpdf-5.5.4.jar" size="2148390" download="eager" />
+    <jar href="libs\sqlite-jdbc-3.8.11.1.jar" size="5191028" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="com.riteboiler.frontoffice.MainApp"  name="Front Office" />
+  <update check="background"/>
+</jnlp>
