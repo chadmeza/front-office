@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class RiteDB {
 	private final String driver = "org.sqlite.JDBC";
 	private final String database = "sqlite";
-	private final String fileName = "N:\\Chad\\Software\\Front Office\\frontoffice.db";
+	private final String fileName = "C:\\Users\\Chad Meza\\Downloads\\frontoffice.db";
 	private Connection connection = null;
 	
 	/**
