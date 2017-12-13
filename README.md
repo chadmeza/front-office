@@ -1,2 +1,2 @@
 # Front Office
-Desktop application built using Java / JavaFX.
+Desktop application developed using Java / JavaFX.
